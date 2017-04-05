@@ -15,7 +15,6 @@ module.exports = yeoman.Base.extend({
     }, {
       name: 'description',
       message: 'Summarize your project in one sentence:',
-      store: true,
       validate: x => x.length > 0 ? true : 'You must provide a description.'
     }, {
       name: 'banner',
@@ -26,6 +25,7 @@ module.exports = yeoman.Base.extend({
       name: 'bannerPath',
       message: 'Where is the banner image? Ex: \'img/banner.png\'',
       type: 'input',
+      store: true,
       when: function (answers) {
         return answers.banner;
       }
